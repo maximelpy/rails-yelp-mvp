@@ -1,0 +1,9 @@
+<h1>Leave a review for "<%= @restaurant.name %>"</h1>
+
+<!-- post /restaurants/:restaurant_id/reviews -->
+<!-- if simple form detects errors in `@review` it will display them in the form -->
+<%= simple_form_for([@restaurant, @review]) do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+  <%= f.submit %>
+<% end %>
